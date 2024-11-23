@@ -287,12 +287,11 @@ class Call:
                         original_chat_id,
                         text=_["call_7"],
                     )
-                img = await gen_thumb(videoid)
+                img = None
                 button = telegram_markup(_, chat_id)
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
+                    text=_["stream_1"].format(
                         title[:27],
                         f"https://t.me/{app.username}?start=info_{videoid}",
                         check[0]["dur"],
@@ -345,13 +344,12 @@ class Call:
                         original_chat_id,
                         text=_["call_7"],
                     )
-                img = await gen_thumb(videoid)
+                img = None
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
+                    text=_["stream_1"].format(
                         title[:27],
                         f"https://t.me/{app.username}?start=info_{videoid}",
                         check[0]["dur"],
@@ -379,10 +377,9 @@ class Call:
                         text=_["call_7"],
                     )
                 button = telegram_markup(_, chat_id)
-                run = await app.send_photo(
+                run = await app.send_message(
                     original_chat_id,
-                    photo=config.STREAM_IMG_URL,
-                    caption=_["stream_2"].format(user),
+                    text=_["stream_2"].format(user),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
                 db[chat_id][0]["mystic"] = run
@@ -425,14 +422,9 @@ class Call:
                     )
                 if videoid == "telegram":
                     button = telegram_markup(_, chat_id)
-                    run = await app.send_photo(
+                    run = await app.send_message(
                         original_chat_id,
-                        photo=(
-                            config.TELEGRAM_AUDIO_URL
-                            if str(streamtype) == "audio"
-                            else config.TELEGRAM_VIDEO_URL
-                        ),
-                        caption=_["stream_1"].format(
+                        text=_["stream_1"].format(
                             title, config.SUPPORT_GROUP, check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
@@ -441,10 +433,9 @@ class Call:
                     db[chat_id][0]["markup"] = "tg"
                 elif videoid == "soundcloud":
                     button = telegram_markup(_, chat_id)
-                    run = await app.send_photo(
+                    run = await app.send_message(
                         original_chat_id,
-                        photo=config.SOUNCLOUD_IMG_URL,
-                        caption=_["stream_1"].format(
+                        text=_["stream_1"].format(
                             title, config.SUPPORT_GROUP, check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
@@ -453,10 +444,9 @@ class Call:
                     db[chat_id][0]["markup"] = "tg"
                 elif "saavn" in videoid:
                     button = telegram_markup(_, chat_id)
-                    run = await app.send_photo(
+                    run = await app.send_message(
                         original_chat_id,
-                        photo=check[0]["thumb"],
-                        caption=_["stream_1"].format(
+                        text=_["stream_1"].format(
                             title, config.SUPPORT_GROUP, check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
@@ -464,12 +454,11 @@ class Call:
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
                 else:
-                    img = await gen_thumb(videoid)
+                    img = None
                     button = stream_markup(_, videoid, chat_id)
-                    run = await app.send_photo(
+                    run = await app.send_message(
                         original_chat_id,
-                        photo=img,
-                        caption=_["stream_1"].format(
+                        text=_["stream_1"].format(
                             title[:27],
                             f"https://t.me/{app.username}?start=info_{videoid}",
                             check[0]["dur"],
