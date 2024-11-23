@@ -514,20 +514,16 @@ async def play_commnd(
                 return await play_logs(message, streamtype=f"URL Searched Inline")
 
 
-__MODULE__ = "Play"
+__MODULE__ = "Oynatma Komutları"
 __HELP__ = """
-<b>★ play, vplay, cplay</b> - Comandos Disponíveis
-<b>★ playforce, vplayforce, cplayforce</b> - Comandos de Reprodução Forçada
+<b>★ oynat, voynat, coynat</b> - Kullanılabilir Komutlar
 
-<b>✦ c significa reprodução em canal.</b>
-<b>✦ v significa reprodução de vídeo.</b>
-<b>✦ force significa reprodução forçada.</b>
+<b>✦ C, Kanal Oynatma Anlamına Gelir.</b>
+<b>✦ V, Video Oynatma Anlamına Gelir.</b>
 
-<b>✧ /play ou /vplay ou /cplay</b> - O bot começará a reproduzir a consulta fornecida no chat de voz ou transmitirá links ao vivo nos chats de voz.
+<b>✧ /oynat</b> - İstediğiniz Parçayı, Müziği Sesli Sohbette Açabilirsiniz [Örnek: /oynat Neşet Ertaş Gönül Dağı]
+<b>✧ /voynat</b> - İstediğiniz Video/Filmi Sesli Sohbette Oynatabilirsiniz.
+<b>✧ /coynat</b> - İstediğiniz Parçayı Kanalınızın Sesli Sohbetinde Oynatabilirsiniz.
 
-<b>✧ /playforce ou /vplayforce ou /cplayforce</b> - A Reprodução Forçada interrompe a faixa atual no chat de voz e começa a tocar a faixa pesquisada instantaneamente sem alterar/limpar a fila.
-
-<b>✧ /channelplay [Nome de usuário ou ID do chat] ou [Desativar]</b> - Conecte um canal a um grupo e transmita música no chat de voz do canal a partir do seu grupo.
-
-<b>✧ /stream [url] </b> - Transmita uma URL que você acredita ser direta ou m3u8 e que não pode ser reproduzida pelo comando /play.
+<b>✧ /stream [URL] </b> - Doğrudan Veya m3u8 Olduğuna İnandığınız Ve /oynat Komutuyla Açılmayan Bir URL'yi İletin.
 """
