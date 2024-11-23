@@ -32,7 +32,7 @@ class WinxBot(Client):
         self.name = None
         self.mention = None
 
-        LOGGER(__name__).info(f"Starting Bot")
+        LOGGER(__name__).info(f"Bot Başlatılıyor...")
         super().__init__(
             "WinxMusic",
             api_id=config.API_ID,
@@ -84,7 +84,7 @@ class WinxBot(Client):
             if chat_id:
                 await self.send_message(
                     chat_id,
-                    "I don't have the right to send photos in this chat, leaving now..",
+                    "**Bu Sohbette Fotoğraf Gönderme Hakkım Yok, Şimdi Ayrılıyorum..**",
                 )
                 await self.leave_chat(chat_id)
 
@@ -99,28 +99,28 @@ class WinxBot(Client):
         try:
             await self.send_message(
                 config.LOG_GROUP_ID,
-                text=f"🚀 <u><b>{self.mention} Bot Iniciado :</b></u>\n\n🆔 <b>ID</b>: <code>{self.id}</code>\n📛 <b>Nome</b>: {self.name}\n🔗 <b>Nome de usuário:</b> @{self.username}",
+                text=f"🚀 <b>{self.mention} Bot Başlatıldı:</b>\n\n🆔 <b>Bot ID</b>: <code>{self.id}</code>\n📛 <b>Bot Adı</b>: {self.name}\n🔗 <b>Kullanıcı Adı:</b> @{self.username}",
             )
         except Exception as e:
             LOGGER(__name__).error(
-                "Bot failed to access the log group. Ensure the bot is added and promoted as admin."
+                "Bot Log Grubuna Erişemedi. Botun Eklendiğinden Ve Yönetici Olduğundan Emin Olun."
             )
-            LOGGER(__name__).error("Error details:", exc_info=True)
+            LOGGER(__name__).error("Hata Ayrıntıları:", exc_info=True)
             sys.exit()
 
         if config.SET_CMDS == str(True):
             try:
                 await self._set_default_commands()
             except Exception as e:
-                LOGGER(__name__).warning("Failed to set commands:", exc_info=True)
+                LOGGER(__name__).warning("Komutlar Ayarlanamadı:", exc_info=True)
 
     async def _set_default_commands(self):
         private_commands = [
-            BotCommand("start", "Iniciar o bot"),
-            BotCommand("help", "Obter o menu de ajuda"),
-            BotCommand("ping", "Verificar se o bot está ativo ou inativo"),
+            BotCommand("start", "🎧 Botu Başlatın"),
+            BotCommand("yardim", "📖 Yardım Menüsünü Açın"),
+            BotCommand("ping", "Botun Ping Durumunu Kontrol Edin"),
         ]
-        group_commands = [BotCommand("play", "Começar a tocar a música solicitada")]
+        group_commands = [BotCommand("oynat", "▶️ İstediğiniz Müziği Oynatın")]
         admin_commands = [
             BotCommand("play", "Começar a tocar a música solicitada"),
             BotCommand("skip", "Ir para a próxima música na fila"),
