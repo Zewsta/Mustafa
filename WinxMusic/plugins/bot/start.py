@@ -291,25 +291,18 @@ async def welcome(_client: Client, message: Message):
             return
 
 
-__MODULE__ = "Bot"
+__MODULE__ = "Bot Komutları"
 __HELP__ = f"""
-<b>✦ c significa reprodução em canal.</b>
 
-<b>★ {command("STATS_COMMAND")}</b> - Obtenha as Estatísticas Globais das 10 faixas mais tocadas, 10 principais usuários do bot, 10 principais chats no bot, 10 mais tocadas em um chat, etc.
+<b>★ {command("STATS_COMMAND")}</b> - En Çok Oynatılan 10 Parçanın, En İyi 10 Bot Kullanıcısının, Bottaki En İyi 10 Sohbetin, Vb. Genel İstatistiklerini Alın.
 
-<b>★ {command("SUDOUSERS_COMMAND")}</b> - Verifique os usuários Sudo do bot.
+<b>★ {command("SUDOUSERS_COMMAND")}</b> - Botun Sudo Kullanıcılarını Kontrol Edin.
 
-<b>★ {command("LYRICS_COMMAND")} [Nome da Música]</b> - Pesquise letras para uma música específica na web.
+<b>★ {command("LYRICS_COMMAND")} [Şarkı Adı]</b> - Web'de Belirli Bir Şarkının Sözlerini Arayın.
 
-<b>★ {command("SONG_COMMAND")} [Nome da Faixa] ou [Link do YT]</b> - Baixe qualquer faixa do YouTube nos formatos MP3 ou MP4.
+<b>★ {command("SONG_COMMAND")} [Şarkı Adı]</b> - Herhangi Bir YouTube Parçasını MP3 Veya MP4 Formatlarında İndirin.
 
-<b>★ {command("QUEUE_COMMAND")}</b> - Verifique a lista de músicas na fila.
+<b>★ {command("QUEUE_COMMAND")}</b> - Sıradaki Şarkıların Listesini Kontrol Edin.
 
-    <u><b>⚡️Bot Privado:</b></u>
-
-<b>✧ {command("AUTHORIZE_COMMAND")} [ID_DO_CHAT]</b> - Permitir que um chat use o seu bot.
-
-<b>✧ {command("UNAUTHORIZE_COMMAND")} [ID_DO_CHAT]</b> - Bloquear um chat de usar o seu bot.
-
-<b>✧ {command("AUTHORIZED_COMMAND")}</b> - Verificar todos os chats permitidos do seu bot.
-"""
+<b>★ {command("RELOAD_COMMAND")}</b> - Grubunuz İçin Botun Yönetici Listesini Güncelleyin.
+""" 
