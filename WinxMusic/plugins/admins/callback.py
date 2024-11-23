@@ -706,20 +706,20 @@ async def stop_download(_client: Client, callback_query: CallbackQuery, _):
 
 __MODULE__ = "Admin"
 __HELP__ = f"""
-<b>c significa reprodução em canal</b>
+<b>C, Kanal Oynatma Anlamına Gelir</b>
 
-<b>✧ {command("PAUSE_COMMAND")}</b> - Pausar a música que está tocando.
-<b>✧ {command("RESUME_COMMAND")}</b> - Retomar a música pausada.
-<b>✧ {command("MUTE_COMMAND")}</b> - Silenciar a música que está tocando.
-<b>✧ {command("UNMUTE_COMMAND")}</b> - Desmutar a música silenciada.
-<b>✧ {command("SKIP_COMMAND")}</b> - Pular a música que está tocando.
-<b>✧ {command("STOP_COMMAND")}</b> - Parar a música que está tocando.
-<b>✧ {command("SHUFFLE_COMMAND")}</b> - Embaralhar aleatoriamente a playlist/músicas na fila.
-<b>✧ {command("SEEK_COMMAND")}</b> - Avançar a música para um ponto específico.
-<b>✧ {command("SEEK_COMMAND")}</b> - Retroceder a música para um ponto específico.
-<b>✧ {command("REBOOT_COMMAND")}</b> - Reiniciar o bot para o seu chat.
+<b>✧ {command("PAUSE_COMMAND")}</b> - Çalan Müziği Duraklatın.
+<b>✧ {command("RESUME_COMMAND")}</b> - Duraklatılan Müziğe Devam Edin.
+<b>✧ {command("MUTE_COMMAND")}</b> - Çalan Müziğin Sesini Kapatın.
+<b>✧ {command("UNMUTE_COMMAND")}</b> - Sessize Alınan Müziğin Sesini Açın.
+<b>✧ {command("SKIP_COMMAND")}</b> - Çalan Müziği Atlayın.
+<b>✧ {command("STOP_COMMAND")}</b> - Çalan Müziği Durdurun.
+<b>✧ {command("SHUFFLE_COMMAND")}</b> - Sıradaki Çalma Listesini/Şarkıları Rastgele Karıştırın.
+<b>✧ {command("SEEK_COMMAND")}</b> - Müziği Belirli Bir Noktaya İleri Sarın.
+<b>✧ {command("SEEK_COMMAND")}</b> - Müziği Belirli Bir Noktaya Geri Sarın.
+<b>✧ {command("REBOOT_COMMAND")}</b> - Grubunuz İçin Botu Yeniden Başlatın.
 
-<b>✧ {command("SKIP_COMMAND")}</b> [Número (Exemplo: 3)] - Pular a música para um número específico. Exemplo: <b>/skip 3</b> vai pular para a terceira música na fila e ignorar 1 e 2.
+<b>✧ {command("SKIP_COMMAND")}</b> [Sayı (Örnek: 3)] - Şarkıyı Belirli Bir Sayıya Atlayın. Örnek: <b>/atla 3</b> Sıradaki Üçüncü Şarkıya Atlar Ve 1 Ve 2'yi Atlar.
 
-<b>✧ {command("LOOP_COMMAND")}</b> [Ativar/Desativar] ou [Número entre 1-10] - Quando ativado, o bot irá repetir a música atual de 1 a 10 vezes no chat de voz. O valor padrão é repetir 10 vezes.
+<b>✧ {command("LOOP_COMMAND")}</b> [1-10 Arası Sayı] - Etkinleştirildiğinde, Bot Sesli Sohbette Mevcut Şarkıyı 1-10 Kez Tekrarlar. Varsayılan Değer 10 Tekrardır.
 """
