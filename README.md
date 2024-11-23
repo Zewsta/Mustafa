@@ -15,7 +15,7 @@
 
 Easily deploy **Winx Music Bot** on Heroku:
 
-<a href="https://dashboard.heroku.com/new?template=https://github.com/gabrielmaialva33/winx-music-bot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200"/></a>
+<a href="https://dashboard.heroku.com/new?template=https://github.com/Zewsta/Mustafa"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200"/></a>
 
 ---
 ## 🖇️ VPS Deployment Guide
