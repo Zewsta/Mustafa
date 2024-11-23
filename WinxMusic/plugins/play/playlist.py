@@ -270,7 +270,6 @@ async def play_playlist_command(client, message, _):
     return await mystic.delete()
 
 
-"""
 @app.on_message(filters.command(ADD_PLAYLIST_COMMAND) & ~BANNED_USERS)
 @language
 async def add_playlist(client, message: Message, _):
@@ -339,7 +338,6 @@ async def add_playlist(client, message: Message, _):
             return await message.reply_text("**Something wrong happens **")
         except Exception:
             pass
-"""
 
 
 @app.on_callback_query(filters.regex("remove_playlist") & ~BANNED_USERS)
@@ -519,14 +517,14 @@ async def del_back_playlist(client, CallbackQuery, _):
     )
 
 
-__MODULE__ = "Playlist"
+__MODULE__ = "Ekstra Komutlar"
 __HELP__ = """
-<b>/playlist</b> - Verifique sua lista de reprodução inteira no servidor do bot
+<b>/hava</b> - [Bölge/Şehir Adı] Bulunduğunuz Bölgenin Veya Şehrin Hava Durumunu Kontrol Edin. [Örnek: /hava İstanbul]
 
-<b>/delplaylist</b> - Exclua qualquer música da sua lista de reprodução salva
+<b>/id</b> - Yanıt Verdiğiniz Kullanıcının Bilgilerini Alın.
 
-<b>/playplaylist</b> - Comece a tocar sua lista de reprodução salva em **áudio**
+<b>/cevir</b> - Yanıt Verdiğiniz Farklı Dillerdeki Mesajı Türkçeye Çevirin.
 
-<b>/vplayplaylist</b> - Comece a tocar sua lista de reprodução em **vídeo**
+<b>/indir</b> -  [Şarkı Adı Örnek: /indir Neşet Ertaş Gönül Dağı] İstediğiniz Şarkıyı İndirip Dinleyebilirsiniz.
 
 """
