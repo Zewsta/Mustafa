@@ -9,16 +9,16 @@ SETTINGS_COMMAND: [ "settings", "setting" ]
 RELOAD_COMMAND: [ "admincache", "reload" ]
 GSTATS_COMMAND: [ "gstats" ]
 STATS_COMMAND: [ "stats" ]
-LANGUAGE_COMMAND: [ "lang", "language", "langs" ]
+LANGUAGE_COMMAND: [ "lang", "language", "diller", "langs" ]
 
 # Play Commands
-PLAY_COMMAND: [ "play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce" ]
+PLAY_COMMAND: [ "play", "oynat", "voynat", "coynat", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce" ]
 PLAYMODE_COMMAND: [ "playmode" ]
 CHANNELPLAY_COMMAND: [ "channelplay" ]
-STREAM_COMMAND: [ "stream", "cstream", "streamforce" ]
+STREAM_COMMAND: [ "stream", "cstream", "yayin", "streamforce" ]
 
 #Playlists Command
-PLAYLIST_COMMAND: [ "playlist" ]
+PLAYLIST_COMMAND: [ "playlist", "oynatmalistesi" ]
 
 PLAY_PLAYLIST_COMMAND: [ "playplaylist", "vplayplaylist" ]
 
@@ -28,40 +28,40 @@ ADD_PLAYLIST_COMMAND: [ "addplaylist" ]
 
 
 # Tools
-QUEUE_COMMAND: [ "queue","cqueue","cplayer", "playing", "cplaying", "player" ]
-SONG_COMMAND: [ "song", "video" ]
+QUEUE_COMMAND: [ "queue","cqueue","cplayer", "sira", "sıra", "playing", "cplaying", "player" ]
+SONG_COMMAND: [ "song", "video", "indir", "bul" ]
 LYRICS_COMMAND: [ "lyrics" ]
 
 
 # Admin Commands
-AUTH_COMMAND: [ "auth" ]
-UNAUTH_COMMAND: [ "unauth" ]
-AUTHUSERS_COMMAND: [ "authusers" ]
-PAUSE_COMMAND: [ "pause", "cpause" ]
-RESUME_COMMAND: [ "resume", "cresume" ]
+AUTH_COMMAND: [ "ytver" ]
+UNAUTH_COMMAND: [ "ytal" ]
+AUTHUSERS_COMMAND: [ "yetkililer" ]
+PAUSE_COMMAND: [ "duraklat", "cduraklat" ]
+RESUME_COMMAND: [ "devam", "cdevam" ]
 MUTE_COMMAND: [ "mute", "cmute" , "vcmute" ]
 UNMUTE_COMMAND: [ "unmute", "cunmute" , "vcunmute" ]
-STOP_COMMAND: [ "stop", "end", "cstop", "cend" ]
-SKIP_COMMAND: [ "skip", "cskip" ]
-SHUFFLE_COMMAND: [ "shuffle", "cshuffle" ]
-LOOP_COMMAND: [ "loop", "cloop" ]
-SEEK_COMMAND: [ "seek", "cseek", "seekback", "cseekback" ]
+STOP_COMMAND: [ "dur", "son", "cdur", "cson", "cstop", "cend", "stop", "end" ]
+SKIP_COMMAND: [ "atla", "catla", "skip", "cskip" ]
+SHUFFLE_COMMAND: [ "karistir", "ckaristir", "shuffle", "cshuffle" ]
+LOOP_COMMAND: [ "dongu", "cdongu", "loop", "cloop" ]
+SEEK_COMMAND: [ "ilerisar", "cilerisar", "gerisar", "cgerisar", "seek", "seekback" ]
 REBOOT_COMMAND: [ "reboot" ]
 
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND: [ "addsudo" ]
-DELSUDO_COMMAND: [ "delsudo" ]
+ADDSUDO_COMMAND: [ "addsudo", "sudoekle" ]
+DELSUDO_COMMAND: [ "delsudo", "sudokaldir" ]
 SUDOUSERS_COMMAND: [ "sudolist" ]
 
 #Broadcast
-BROADCAST_COMMAND: [ "broadcast", "gcast" ]
+BROADCAST_COMMAND: [ "broadcast", "gcast", "reklam", "duyuru" ]
 
 #Blacklist chat
-BLACKLISTCHAT_COMMAND: [ "blacklistchat" ]
-WHITELISTCHAT_COMMAND: [ "whitelistchat" ]
-BLACKLISTEDCHAT_COMMAND: [ "blacklistedchat" ]
+BLACKLISTCHAT_COMMAND: [ "blacklistchat", "karaliste" ]
+WHITELISTCHAT_COMMAND: [ "whitelistchat", "beyazliste" ]
+BLACKLISTEDCHAT_COMMAND: [ "blacklistedchat", "karalistesi" ]
 
 # Video Calls Command
 VIDEOLIMIT_COMMAND: [ "set_video_limit" ]
@@ -96,11 +96,11 @@ UNBLOCK_COMMAND: [ "unblock" ]
 BLOCKED_COMMAND: [ "blockedusers" ]
 
 #sPEEDTEST
-SPEEDTEST_COMMAND: [ "speedtest" ]
+SPEEDTEST_COMMAND: [ "speedtest", "spd", "speed" ]
 
 #Voice chat commands
-ACTIVEVC_COMMAND: [ "activevoice","activevc" ]
-ACTIVEVIDEO_COMMAND: [ "activevideo","activevd" ]
+ACTIVEVC_COMMAND: [ "activevoice","activevc","aktifses" ]
+ACTIVEVIDEO_COMMAND: [ "activevideo","activevd","aktifvideo" ]
 AC_COMMAND: [ "ac" ]
 
 #Gban Commands
@@ -109,6 +109,6 @@ UNGBAN_COMMAND: [ "ungban" ]
 GBANNED_COMMAND: [ "gbannedusers" ]
 
 # AnimiZeY
-MOVIES_COMMAND: [ "movies", "movie" , "filmes" , "filme" ]
+MOVIES_COMMAND: [ "movies", "movie" , "filmes" , "film" ]
 ANIME_COMMAND: [ "anime", "animes" ]
 FOLDER_COMMAND: [ "folder", "folders" , "pastas" , "pasta" ]
