@@ -84,19 +84,3 @@ async def sudoers_list(client, message: Message, _):
         return await mystic.edit_text(_["block_5"])
     else:
         return await mystic.edit_text(msg)
-
-
-__MODULE__ = "B-list"
-__HELP__ = f"""
-<b>✧ {command("BLACKLISTCHAT_COMMAND")}</b> [ID do chat] - Bloquear qualquer chat de usar o Bot de Música.
-<b>✧ {command("WHITELISTCHAT_COMMAND")}</b> [ID do chat] - Desbloquear qualquer chat da lista de bloqueio para usar o Bot de Música.
-<b>✧ {command("BLACKLISTEDCHAT_COMMAND")}</b> - Verificar todos os chats bloqueados.
-
-<b>✧ {command("BLOCK_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Impede um usuário de usar comandos do bot.
-<b>✧ {command("UNBLOCK_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Remove um usuário da lista de bloqueio do bot.
-<b>✧ {command("BLOCKED_COMMAND")}</b> - Verificar a lista de usuários bloqueados.
-
-<b>✧ {command("GBAN_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Banir um usuário de todos os chats atendidos e impedir que ele use seu bot.
-<b>✧ {command("UNGBAN_COMMAND")}</b> [Nome de usuário ou responder a um usuário] - Remove um usuário da lista de banimento global e permite que ele use seu bot.
-<b>✧ {command("GBANNED_COMMAND")}</b> - Verificar a lista de usuários banidos globalmente.
-"""
