@@ -722,4 +722,8 @@ __HELP__ = f"""
 <b>✧ {command("SKIP_COMMAND")}</b> [Sayı (Örnek: 3)] - Şarkıyı Belirli Bir Sayıya Atlayın. Örnek: <b>/atla 3</b> Sıradaki Üçüncü Şarkıya Atlar Ve 1 Ve 2'yi Atlar.
 
 <b>✧ {command("LOOP_COMMAND")}</b> [1-10 Arası Sayı] - Etkinleştirildiğinde, Bot Sesli Sohbette Mevcut Şarkıyı 1-10 Kez Tekrarlar. Varsayılan Değer 10 Tekrardır.
+
+<b>✧ {command("AUTH_COMMAND")}</b> [Kullanıcı Adı] - Grubun YETKİLİ LİSTESİNE Bir Kullanıcı Ekleyin.
+<b>✧ {command("UNAUTH_COMMAND")}</b> [Kullanıcı Adı] - Grubun YETKİLİ LİSTESİNDEN Bir Kullanıcıyı Kaldırın.
+<b>✧ {command("AUTHUSERS_COMMAND")}</b> - Grubun YETKİLİ LİSTESİNİ Kontrol Edin.
 """
