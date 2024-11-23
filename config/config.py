@@ -75,7 +75,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO", "https://github.com/gabrielmaialva33/winx-music-bot"
+    "UPSTREAM_REPO", "https://github.com/Zewsta/Mustafa"
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -83,12 +83,8 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", "")
 
 # Only  Links formats are  accepted for this Var value.
-SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/canaiswinx"
-)  # Example:- https://t.me/cinewinx
-SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/+QuH3Xab1-5xiMzZh"
-)  # Example:- https://t.me/cinewinxcoments
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", None)  # Example:- https://t.me/cinewinx
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", None)  # Example:- https://t.me/cinewinxcoments
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", False)
@@ -108,9 +104,7 @@ YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 # Your Github Repo.. Will be shown on /start Command
-GITHUB_REPO = getenv(
-    "GITHUB_REPO", "https://github.com/gabrielmaialva33/winx-music-bot"
-)
+GITHUB_REPO = getenv("GITHUB_REPO", None)
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "530a978df3084f8b916e3f512a8c8bb1")
@@ -175,11 +169,7 @@ autoclean = []
 
 # Images
 
-START_IMG_URL = getenv(
-    "START_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/winx-music-bot/refs/heads/master/assets/start_img_2.png",
-    # This is the file id of the photo you can also put the url of photo
-)
+START_IMG_URL = getenv("START_IMG_URL", None)
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
