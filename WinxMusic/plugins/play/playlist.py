@@ -525,6 +525,4 @@ __HELP__ = """
 
 <b>/cevir</b> - Yanıt Verdiğiniz Farklı Dillerdeki Mesajı Türkçeye Çevirin.
 
-<b>/indir</b> -  [Şarkı Adı Örnek: /indir Neşet Ertaş Gönül Dağı] İstediğiniz Şarkıyı İndirip Dinleyebilirsiniz.
-
 """
