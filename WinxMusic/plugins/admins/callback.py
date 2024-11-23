@@ -704,7 +704,7 @@ async def stop_download(_client: Client, callback_query: CallbackQuery, _):
     await callback_query.answer("Failed to Recognise Task", show_alert=True)
 
 
-__MODULE__ = "Admin"
+__MODULE__ = "Admin Komutları"
 __HELP__ = f"""
 <b>C, Kanal Oynatma Anlamına Gelir</b>
 
