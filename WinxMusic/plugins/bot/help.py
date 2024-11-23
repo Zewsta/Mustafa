@@ -19,8 +19,8 @@ from strings import get_command, get_string
 
 HELP_COMMAND = get_command("HELP_COMMAND")
 
-COLUMN_SIZE = 4  # number of  button height
-NUM_COLUMNS = 3  # number of button width
+COLUMN_SIZE = 3  # number of  button height
+NUM_COLUMNS = 2  # number of button width
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
@@ -176,17 +176,17 @@ async def help_button(client: Client, query: CallbackQuery):
         prev_page_num = int(chat_match.group(3))
         close = int(chat_match.group(4)) == 1
         text = (
-                f"<b><u>Aqui está a ajuda para {HELPABLE[module].__MODULE__}:</u></b>\n"
+                f"<b><u>{HELPABLE[module].__MODULE__} :</u></b>\n"
                 + HELPABLE[module].__HELP__
         )
         key = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Voltar",
+                        text="↪️ Geri",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Fechar", callback_data="close"),
+                    InlineKeyboardButton(text="💣 Kapat", callback_data="close"),
                 ],
             ]
         )
@@ -201,17 +201,17 @@ async def help_button(client: Client, query: CallbackQuery):
         prev_page_num = int(mod_match.group(2))
         close = int(mod_match.group(3)) == 1
         text = (
-                f"<b><u>Aqui está a ajuda para {HELPABLE[module].__MODULE__}:</u></b>\n"
+                f"<b><u>{HELPABLE[module].__MODULE__} :</u></b>\n"
                 + HELPABLE[module].__HELP__
         )
         key = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Voltar",
+                        text="↪️ Geri",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Fechar", callback_data="close"),
+                    InlineKeyboardButton(text="💣 Kapat", callback_data="close"),
                 ],
             ]
         )
