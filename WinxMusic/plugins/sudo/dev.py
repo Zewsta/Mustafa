@@ -208,23 +208,3 @@ async def shellrunner(_, message: Message):
 def command(cmd: str):
     cmds = " ".join([f"/{c}" for c in get_command(cmd)])
     return cmds
-
-
-__MODULE__ = "Dev"
-__HELP__ = f"""
-<b><u>Adicionar e remover sudoers:</u></b>
-
-<b>{command("ADDSUDO_COMMAND")} [Nome de usuário ou responder a um usuário] - Adicionar sudo ao seu bot</b>
-<b>{command("DELSUDO_COMMAND")} [Nome de usuário, ID do usuário ou responder a um usuário] - Remover dos sudoers do bot</b>
-<b>{command("SUDOUSERS_COMMAND")} - Obter uma lista de todos os sudoers</b>
-
-<b><u>Comandos do Bot:</u></b>
-
-<b>{command("RESTART_COMMAND")}</b> - Reiniciar o bot (apenas SUDOERS)
-<b>{command("UPDATE_COMMAND")}</b> - Atualizar o bot
-<b>{command("SPEEDTEST_COMMAND")}</b> - Verificar a velocidade do servidor
-<b>{command("MAINTENANCE_COMMAND")} [ativar / desativar]</b> - Ativar ou desativar o modo de manutenção do bot
-<b>{command("LOGGER_COMMAND")} [ativar / desativar]</b> - Ativar ou desativar o registro de consultas pesquisadas no grupo de logs
-<b>{command("GETLOG_COMMAND")} [Número de linhas]</b> - Obter logs do servidor
-<b>{command("AUTOEND_COMMAND")} [ativar / desativar]</b> - Encerrar automaticamente a transmissão após 30 segundos se ninguém estiver ouvindo músicas
-"""
