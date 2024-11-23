@@ -23,24 +23,24 @@ from strings import get_command
 SONG_COMMAND = get_command("SONG_COMMAND")
 
 
-@app.on_message(filters.command(SONG_COMMAND) & filters.group & ~BANNED_USERS)
-@language
-async def song_command_group(_client: Client, message: Message, _):
-    upl = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text=_["SG_B_1"],
-                    url=f"https://t.me/{app.username}?start=song",
-                ),
-            ]
-        ]
-    )
+# Command
+SONG_COMMAND = get_command("SONG_COMMAND")
 
-    await message.reply_text(_["song_1"], reply_markup=upl)
 
+@app.on_message(
+    filters.command(SONG_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
+)
 
 # Song Module
+
+
+@app.on_message(
+    filters.command(SONG_COMMAND)
+    & filters.private
+    & ~BANNED_USERS
+)
 
 
 @app.on_message(filters.command(SONG_COMMAND) & filters.private & ~BANNED_USERS)
@@ -310,24 +310,47 @@ async def song_download_cb(client: Client, callback_query: CallbackQuery, _):
         except Exception as e:
             return await mystic.edit_text(_["song_9"].format(e))
 
+        res = ()
+
+        visit_button = InlineKeyboardButton(
+            text="⚡ Klasik Müzik",
+            url=f"https://t.me/KlasikMuzikFM"
+        )
+
+        visit_markup = InlineKeyboardMarkup(
+            [[visit_button]]
+        )
+        
         med = InputMediaAudio(
             media=filename,
-            caption=title,
+            caption=res,
             thumb=thumb_image_path,
-            title=title,
-            performer=x["uploader"],
+            performer="@KlasikMuzikBot"
         )
-
+        
         await mystic.edit_text(_["song_11"])
-
+        
         await app.send_chat_action(
-            chat_id=callback_query.message.chat.id,
+            chat_id=CallbackQuery.message.chat.id,
             action=enums.ChatAction.UPLOAD_AUDIO,
         )
-
+        
         try:
-            await callback_query.edit_message_media(media=med)
+            await CallbackQuery.edit_message_media(media=med, reply_markup=visit_markup)
         except Exception as e:
             print(e)
             return await mystic.edit_text(_["song_10"])
+        
+        rep = ()
+        
+        channel_id = -1002305407102
+        
+        await app.send_audio(
+            chat_id=channel_id,
+            audio=filename,
+            caption=rep,
+            performer="@KlasikMuzikBot",
+            thumb=thumb_image_path,
+        )
+        
         os.remove(filename)
