@@ -86,15 +86,3 @@ async def activevi_(_, message: Message):
 async def vc(client, message: Message):
     ac_audio = str(len(await get_active_chats()))
     await message.reply_text(f"<b>Chats Ativos</b>: {ac_audio}")
-
-
-__MODULE__ = "Ativo"
-__HELP__ = f"""
-<b>✧ {command("AC_COMMAND")}</b> - Verificar os chats de voz ativos no bot.
-
-<b>✧ {command("ACTIVEVC_COMMAND")}</b> - Verificar as chamadas de voz e vídeo ativas no bot.
-
-<b>✧ {command("ACTIVEVIDEO_COMMAND")}</b> - Verificar as chamadas de vídeo ativas no bot.
-
-<b>✧ {command("STATS_COMMAND")}</b> - Verificar as estatísticas do bot.
-"""
