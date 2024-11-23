@@ -6,7 +6,7 @@ PRIVACY_COMMAND: [ "privacy" ]
 START_COMMAND: [ "start", "baslat" ]
 HELP_COMMAND: [ "help", "yardim" ]
 SETTINGS_COMMAND: [ "settings", "setting", "ayar", "ayarlar" ]
-RELOAD_COMMAND: [ "admincache", "reload" ]
+RELOAD_COMMAND: [ "reload" ]
 GSTATS_COMMAND: [ "gstatss" ]
 STATS_COMMAND: [ "statss" ]
 LANGUAGE_COMMAND: [ "lang", "language", "diller", "langs" ]
@@ -18,7 +18,7 @@ CHANNELPLAY_COMMAND: [ "channelplay" ]
 STREAM_COMMAND: [ "stream", "cstream", "yayin", "streamforce" ]
 
 #Playlists Command
-PLAYLIST_COMMAND: [ "playlist", "oynatmalistesi" ]
+PLAYLIST_COMMAND: [ "playlist", ]
 
 PLAY_PLAYLIST_COMMAND: [ "playplaylist", "vplayplaylist" ]
 
@@ -28,8 +28,8 @@ ADD_PLAYLIST_COMMAND: [ "addplaylist" ]
 
 
 # Tools
-QUEUE_COMMAND: [ "queue","cqueue","cplayer", "sira", "sıra", "playing", "cplaying", "player" ]
-SONG_COMMAND: [ "song", "video", "indir", "bul" ]
+QUEUE_COMMAND: [ "sira" ]
+SONG_COMMAND: [ "indir" ]
 LYRICS_COMMAND: [ "lyrics" ]
 
 
@@ -39,13 +39,13 @@ UNAUTH_COMMAND: [ "ytal" ]
 AUTHUSERS_COMMAND: [ "yetkililer" ]
 PAUSE_COMMAND: [ "duraklat", "cduraklat" ]
 RESUME_COMMAND: [ "devam", "cdevam" ]
-MUTE_COMMAND: [ "mute", "cmute" , "vcmute" ]
-UNMUTE_COMMAND: [ "unmute", "cunmute" , "vcunmute" ]
-STOP_COMMAND: [ "dur", "son", "cdur", "cson", "cstop", "cend", "stop", "end" ]
-SKIP_COMMAND: [ "atla", "catla", "skip", "cskip" ]
-SHUFFLE_COMMAND: [ "karistir", "ckaristir", "shuffle", "cshuffle" ]
-LOOP_COMMAND: [ "dongu", "cdongu", "loop", "cloop" ]
-SEEK_COMMAND: [ "ilerisar", "cilerisar", "gerisar", "cgerisar", "seek", "seekback" ]
+MUTE_COMMAND: [ "mute", "cmute" ]
+UNMUTE_COMMAND: [ "unmute", "cunmute" ]
+STOP_COMMAND: [ "son", "stop", "end" ]
+SKIP_COMMAND: [ "atla", "catla" ]
+SHUFFLE_COMMAND: [ "karistir", "ckaristir" ]
+LOOP_COMMAND: [ "dongu", "cdongu" ]
+SEEK_COMMAND: [ "ilerisar", "gerisar" ]
 REBOOT_COMMAND: [ "reboot" ]
 
 # Sudo Users Commaands
