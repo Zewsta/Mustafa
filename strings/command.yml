@@ -3,12 +3,12 @@
 # Bot Commands
 PING_COMMAND: [ "ping", "alive" ]
 PRIVACY_COMMAND: [ "privacy" ]
-START_COMMAND: [ "start" ]
-HELP_COMMAND: [ "help" ]
-SETTINGS_COMMAND: [ "settings", "setting" ]
+START_COMMAND: [ "start", "baslat" ]
+HELP_COMMAND: [ "help", "yardim" ]
+SETTINGS_COMMAND: [ "settings", "setting", "ayar", "ayarlar" ]
 RELOAD_COMMAND: [ "admincache", "reload" ]
-GSTATS_COMMAND: [ "gstats" ]
-STATS_COMMAND: [ "stats" ]
+GSTATS_COMMAND: [ "gstatss" ]
+STATS_COMMAND: [ "statss" ]
 LANGUAGE_COMMAND: [ "lang", "language", "diller", "langs" ]
 
 # Play Commands
